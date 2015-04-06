@@ -1,0 +1,9 @@
+{
+    "name": "uploader",
+    "description": "Takes files from a queue and uploads them to S3",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "amqp": "*"
+    }
+}
