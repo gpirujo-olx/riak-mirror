@@ -118,6 +118,14 @@ $ rabbitmqadmin list queues
 +-------------+----------+
 ```
 
+If you don't have `rabbitmqadmin`, enable the `rabbitmq_management` plugin, and download the `rabbitmqadmin` tool from the very server.
+```
+$ rabbitmq-plugins enable rabbitmq_management
+$ wget http://127.0.0.1:15672/cli/rabbitmqadmin
+$ chmod +x rabbitmqadmin
+$ mv rabbitmqadmin /usr/local/bin        # optional
+```
+
 ## Test that everything works
 
 Put an object in Riak and check that it's queued in RabbitMQ.
