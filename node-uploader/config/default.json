@@ -1,0 +1,13 @@
+{
+    "queue": {
+        "host": "localhost",
+        "port": 5672,
+        "login": "guest",
+        "password": "guest",
+        "vhost": "/",
+        "queue": "Atlas"
+    },
+    "s3": {
+        "bucket": "static-test.olx.com"
+    }
+}
