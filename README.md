@@ -150,3 +150,31 @@ $ rabbitmqadmin get queue=Atlas requeue=false
 # Output side: Node uploader
 
 This is an application in node that listens to the queue and uploads to S3.
+
+## Install required libraries
+
+Dependencies are declared in the `package.json` file and can be automatically installed with `npm`.
+
+```
+npm install
+```
+
+## Adjust the configuration
+
+The scripts comes with a default configuration in the `default.json` file. You can edit the file at your installation and that's it.
+
+If you want to have more configurations, you can create more files with a `.json` extension in the `config` directory. To use them, just set the `NODE_ENV` environment variable to the name of the configuration file. You can find more information about this in the documentation of [the library used](https://github.com/lorenwest/node-config).
+
+## Edit the URL mapping function (optional)
+
+At almost the end of the script, there is a function called `s3Key`. That function returns the S3 key to be used according to the Riak bucket and Riak key it receives as arguments. By default, it returns both values joined with a dash, but you can change it to a different mapping.
+
+## Run the script
+
+Run the script with `node`.
+
+```
+node uploader.js
+```
+
+You can stop it with `SIGINT` (`Ctrl+C` in console) or `SIGTERM` (a regular `kill`) in any situation. In both cases, the signal is caught by the script and a clean disconnection is performed before termination.
