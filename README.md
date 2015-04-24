@@ -159,6 +159,13 @@ Dependencies are declared in the `package.json` file and can be automatically in
 npm install
 ```
 
+The libraries used are:
+
+* [Node-AMQP](https://github.com/postwait/node-amqp), a client for Rabbit's AMQP protocol
+* [Node-Config](https://github.com/lorenwest/node-config), a configuration file manager
+* Amazon's [NodeJS SDK](http://aws.amazon.com/sdk-for-node-js/)
+
+
 ## Adjust the configuration
 
 The scripts comes with a default configuration in the `default.json` file. You can edit the file at your installation and that's it.
